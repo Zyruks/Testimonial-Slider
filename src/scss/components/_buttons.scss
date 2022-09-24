@@ -90,15 +90,12 @@
   stroke-linejoin: round;
 }
 
-/* focus */
-:where(button, input):where(:not(:active)):focus-visible {
-  outline-offset: rem(5);
+:where(button:active) {
+  background-color: var(--clr-primary-500);
 }
 
-/* pressing 
- modify if you want a different hover effect */
-:where(button, input[type="button"], input[type="submit"], input[type="reset"]):where(:not(:active):hover) {
-  opacity: 75%;
+:where(button:active > img) {
+  filter: brightness(200%);
 }
 
 /* disabled */
@@ -156,7 +153,7 @@
   --shadow-2: #{map.get($custom-btn, "shadow-2")};
 }
 
-:where([data-state="invisible"]) {
+:where(button[data-state="invisible"]) {
   --bg: #{map.get($invisible-btn, "bg")};
   --border-color: #{map.get($invisible-btn, "border-color")};
   --text: #{map.get($invisible-btn, "text")};
@@ -164,4 +161,12 @@
   --highlight: #{map.get($invisible-btn, "highlight")};
   --shadow-1: #{map.get($invisible-btn, "shadow-1")};
   --shadow-2: #{map.get($invisible-btn, "shadow-2")};
+}
+
+:where(button[data-action="prev"]) {
+  border-radius: #{map.get($prev-btn, "border-radius")};
+}
+
+:where(button[data-action="next"]) {
+  border-radius: #{map.get($next-btn, "border-radius")};
 }

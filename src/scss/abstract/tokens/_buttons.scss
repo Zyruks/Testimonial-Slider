@@ -9,14 +9,9 @@ $buttons: (
   "font-weight": var(--fw-700),
   "accent": var(--clr-accent-700),
   "text": var(--clr-neutral-100),
-  "bg":
-    linear-gradient(
-      90deg,
-      var(--clr-primary-500) 0%,
-      var(--clr-primary-600) 100%
-    ),
+  "bg": var(--clr-neutral-100),
   "input-well": var(--clr-neutral-200),
-  "padding-inline": 2ch,
+  "padding-inline": 1ch,
   "padding-block": 0.75ch,
   "border-radius": var(--corner-radius-sides),
   "border-color": var(--clr-primary-800),
@@ -63,4 +58,12 @@ $invisible-btn: (
   "highlight": none,
   "shadow-1": none,
   "shadow-2": none,
+);
+
+$prev-btn: (
+  "border-radius": rem(9999) 0 0 rem(9999),
+);
+
+$next-btn: (
+  "border-radius": 0 rem(9999) rem(9999) 0,
 );
