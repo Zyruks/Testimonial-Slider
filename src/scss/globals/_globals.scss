@@ -10,11 +10,33 @@ html {
 }
 
 body {
-  color: var(--clr-neutral-900);
-  font-weight: var(--fw-400);
-  font-size: var(--fluid-fs-400);
+  color: var(--clr-primary-400);
+  font-weight: var(--fw-300);
+  font-size: var(--fluid-fs-500);
 
   line-height: var(--lh-700);
+
+  /* background style */
+  background-color: var(--clr-neutral-100);
+  background-image: url("../assets/svg/pattern-curve.svg");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+main {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 1fr;
+  align-content: center;
+  @include breakpoint(medium) {
+    align-content: center;
+    justify-content: center;
+  }
+  block-size: 100vh;
+
+  overflow: hidden;
 }
 
 h1,
@@ -35,7 +57,11 @@ h2 {
 }
 
 h3 {
-  font-size: var(--fluid-fs-600);
+  color: var(--clr-primary-400);
+  font-size: var(--fluid-fs-200);
+  @include breakpoint(medium) {
+    font-size: var(--fluid-fs-100);
+  }
 }
 
 ul {
@@ -50,6 +76,4 @@ a:visited,
 a:active {
   color: inherit;
   text-decoration: none;
-
-  transition: all ease-in-out 300ms;
 }
