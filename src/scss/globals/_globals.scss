@@ -12,7 +12,7 @@ html {
 body {
   color: var(--clr-primary-400);
   font-weight: var(--fw-300);
-  font-size: var(--fluid-fs-500);
+  font-size: var(--fluid-fs-300);
 
   line-height: var(--lh-700);
 
@@ -60,7 +60,7 @@ h3 {
   color: var(--clr-primary-400);
   font-size: var(--fluid-fs-200);
   @include breakpoint(medium) {
-    font-size: var(--fluid-fs-100);
+    font-size: var(--fluid-fs-200);
   }
 }
 
