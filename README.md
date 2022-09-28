@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Vercel](https://your-solution-url.com)
-- Live Site URL: [Githut](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/Zyruks/easybank-landing-page/tree/main)
+- Live Site URL: [Vercel](https://testimonial-slider-cqw4-zyruks.vercel.app/)
 
 ## My process
 
