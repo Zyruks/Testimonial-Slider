@@ -75,21 +75,7 @@
   -webkit-touch-callout: none;
 }
 
-/* icons */
-:where(button, input[type="button"], input[type="submit"], input[type="reset"])
-  > :where(svg, [data-icon]) {
-  flex-shrink: 0;
-
-  filter: drop-shadow(var(--text-shadow));
-
-  fill: none;
-  stroke: var(--icon-color);
-  block-size: var(--icon-size);
-  inline-size: var(--icon-size);
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
+/* active state */
 :where(button:active) {
   background-color: var(--clr-primary-500);
 }
@@ -98,71 +84,7 @@
   filter: brightness(200%);
 }
 
-/* disabled */
-:where(button, input[type="button"], input[type="submit"], input[type="reset"])[disabled] {
-  --bg: #{map.get($disable-btn, "bg")};
-  --text: #{map.get($disable-btn, "text")};
-
-  box-shadow: var(--shadow-1);
-
-  cursor: not-allowed;
-}
-
-/* adaptive  text */
-:where([type="submit"], form button:not([type], [disabled])) {
-  --text: var(--accent);
-}
-
-/* red reset */
-:where([type="reset"]) {
-  --border-color: #{map.get($reset-btn, "border-color")};
-  --highlight: #{map.get($reset-btn, "highlight")};
-  --text: #{map.get($reset-btn, "text")};
-}
-
-:where([type="reset"]):focus-visible {
-  outline-color: currentcolor;
-}
-
-/* file input */
-:where(input[type="file"]) {
-  inline-size: 100%;
-  max-inline-size: max-content;
-
-  background-color: var(--input-well);
-}
-
-:where(input[type="button"]),
-:where(input[type="file"])::file-selector-button {
-  appearance: none;
-}
-
-:where(input[type="file"])::file-selector-button {
-  margin-inline-end: var(--padding-inline);
-}
-
-/* Custom Button */
-
-:where(button[data-state="custom"]) {
-  --bg: #{map.get($custom-btn, "bg")};
-  --border-color: #{map.get($custom-btn, "border-color")};
-  --text: #{map.get($custom-btn, "text")};
-  --text-shadow: #{map.get($custom-btn, "text-shadow")};
-  --highlight: #{map.get($custom-btn, "highlight")};
-  --shadow-1: #{map.get($custom-btn, "shadow-1")};
-  --shadow-2: #{map.get($custom-btn, "shadow-2")};
-}
-
-:where(button[data-state="invisible"]) {
-  --bg: #{map.get($invisible-btn, "bg")};
-  --border-color: #{map.get($invisible-btn, "border-color")};
-  --text: #{map.get($invisible-btn, "text")};
-  --text-shadow: #{map.get($invisible-btn, "text-shadow")};
-  --highlight: #{map.get($invisible-btn, "highlight")};
-  --shadow-1: #{map.get($invisible-btn, "shadow-1")};
-  --shadow-2: #{map.get($invisible-btn, "shadow-2")};
-}
-
+/* style for previous and next button */
 :where(button[data-action="prev"]) {
   border-radius: #{map.get($prev-btn, "border-radius")};
 }
